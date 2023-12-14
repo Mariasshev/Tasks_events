@@ -167,6 +167,18 @@
             li.dataset.userNumber = index;
             uslerList.append(li);
         }
+        function mouseEnterHandler(e) {
+            const userNumber = parseInt(e.target.dataset.userNumber);
+            const currentUser = users[userNumber];
+            const output = document.querySelector('#output');
+
+            output.textContent = `
+            User Name: ${currentUser.name.first} ${currentUser.name.last}
+            Age: ${currentUser.age}
+            Balance: ${currentUser.balance}
+            Company: ${currentUser.company}
+            Email: ${currentUser.email}`;
+        }
     </script>
 </body>
 
